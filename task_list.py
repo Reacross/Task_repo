@@ -1,12 +1,6 @@
 from collections import UserList
 import task.py
 
-class Task():
-    def __init__(self, name):
-        self.name = name
-    def task_info_short(self):
-        print(self.name)
-
 class TaskList(UserList):
     def add(self, Task):
         self.data.append(Task)
