@@ -1,5 +1,5 @@
 from collections import UserList
-import task.py
+import task
 
 class TaskList(UserList):
     def add(self, Task):
