@@ -8,6 +8,10 @@ class TaskList(UserList):
     def remove(self, Task):
         self.data.remove(Task)
     
-    def show(self):
+    def show(self, status=None):
         for task in self.data:
-            task.task_info_short()
+            if status == None:
+                task.task_info_short()
+            else:
+                if task.get_status() == status:
+                    task.task_info_short()
