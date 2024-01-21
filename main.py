@@ -9,7 +9,8 @@ def main():
         print("2. Update task status")
         print("3. Remove task")
         print("4. Display all tasks")
-        print("5. Exit")
+        print("5. Task filter")
+        print("6. Exit")
 
         choice = input("Enter your choice: ")
 
@@ -45,6 +46,10 @@ def main():
             task_list.show()
 
         elif choice == '5':
+            status = input("Enter status to filter tasks: ")
+            task_list.show(status)
+
+        elif choice == '6':
             print("Exit.")
             break
 
