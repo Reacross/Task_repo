@@ -19,6 +19,9 @@ class Task:
     
     def get_status(self):
         return self.status
+    
+    def get_id(self):
+        return self.id
 
 
 if __name__ == '__main__':

@@ -5,8 +5,10 @@ class TaskList(UserList):
     def add(self, Task):
         self.data.append(Task)
     
-    def remove(self, Task):
-        self.data.remove(Task)
+    def remove(self, task_id):
+        for task in self.data:
+            if task.get_id() == task_id:
+                self.data.remove(task)
     
     def show(self, status=None):
         for task in self.data:

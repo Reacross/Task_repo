@@ -1,3 +1,5 @@
+from task_list import TaskList
+from task import Task
 
 def main():
     task_list = TaskList()
@@ -19,7 +21,7 @@ def main():
             due_date = input("Enter due date: ")
 
             new_task = Task(task_id, title, description, status, due_date)
-            task_list.add_task(new_task)
+            task_list.add(new_task)
 
             print("Task added successfully.\n")
 
@@ -29,7 +31,7 @@ def main():
 
             for task in task_list.data:
                 if task.id == task_id:
-                    task.update_status(new_status)
+                    task.change_status(new_status)
                     print("Task status updated.\n")
                     break
             else:
@@ -37,10 +39,10 @@ def main():
 
         elif choice == '3':
             task_id = input("Enter task ID to remove: ")
-            task_list.remove_task(task_id)
+            task_list.remove(task_id)
 
         elif choice == '4':
-            task_list.display_all_tasks()
+            task_list.show()
 
         elif choice == '5':
             print("Exit.")
